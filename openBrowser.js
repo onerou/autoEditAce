@@ -10,8 +10,8 @@ const initBrowser = async () => {
 		timeout: 0, //timeout here is 无限制
 		args: [ '--disable-bundled-ppapi-flash=true' ],
 		devtools: true,
-		headless: false
-		// headless: true
+		//headless: false
+		 headless: true
 	})
 	await loginAce()
 }
@@ -44,7 +44,7 @@ const jumpTo = async () => {
 			$('#entryComment').val(evalVar.val)
 			$('#btnSave').click()
 			$('.btn-wrap:nth-child(3)>div')[0].click()
-			$('.msg-btn-inner .btn-icon[value="true"]')
+			$('.msg-btn-inner .btn-icon[value="true"]').click()
 		}, evalVar)
 	}, 2000)
 }
